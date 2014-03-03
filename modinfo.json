@@ -1,7 +1,7 @@
 {
     "context": "client",
     "identifier": "nl.jordev.favComColor",
-    "display_name": "Favorite Commander and Color",
+    "display_name": "Favorite Commander & Color",
     "description": "Automatically chooses the correct colour and commander in the lobby",
     "author": "SideSplitter",
     "version": "1.0.0",
@@ -20,7 +20,7 @@
     "priority": 100,
     "global_mod_list": [],
     "new_game": [
-        "coui://ui/mods/favComColor/new_game.js",
+        "coui://ui/mods/favComColor/new_game.js"
     ],
     "settings": [
         "coui://ui/mods/favComColor/settings.js"

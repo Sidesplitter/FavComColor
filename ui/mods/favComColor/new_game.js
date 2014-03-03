@@ -1,16 +1,16 @@
 //(C) Jord Nijhuis 2014
 
 var colors = {
-	"PURPLE"	: [113, 52,  165],
 	"RED"		: [210, 50,  44 ],
-	"ORANGE"	: [255, 144, 47 ],
-	"BLUE"		: [51,  151, 197],
-	"WHITE"		: [200, 200, 200],
-	"YELLOW"	: [219, 217, 37 ],
-	"GREEN" 	: [83,  119, 48 ],
 	"BLACK" 	: [25,  25,  25 ],
+	"GREEN" 	: [83,  119, 48 ],
+	"WHITE"		: [200, 200, 200],
+	"PURPLE"	: [113, 52,  165],
+	"BLUE"		: [51,  151, 197],
 	"DARK BLUE"	: [59,  54,  182],
+	"ORANGE"	: [255, 144, 47 ],
 	"PINK"		: [206, 51,  122],
+	"YELLOW"	: [219, 217, 37 ],
 	"BROWN"		: [142, 107, 68 ]
 }
 
@@ -38,6 +38,11 @@ function setColor(){
 	//No favorite color
 	if(settings.favColor == "None") 
 		return;
+
+	//We already have our favorite color
+	if(getPlayerSlot().primaryColor() == "rgb(" + colors[settings.favColor] + ")")
+		return;
+
 	//First choice not avaiable
 	if(!isColorAvaiable("rgb(" + colors[settings.favColor] + ")")) 
 		settings.favColor = settings.favColorAlt;
@@ -52,14 +57,10 @@ function setColor(){
 	//Loop through all the colors
 	var colorInterval = setInterval(function(){
 
-		//Wee, we found it
 		if(getPlayerSlot().primaryColor() == "rgb(" + colors[settings.favColor] + ")")
-
 			clearInterval(colorInterval);
-		//Keep searching
 		else
 			model.send_message("next_primary_color");
-		
 	}, 500);
 }
 
