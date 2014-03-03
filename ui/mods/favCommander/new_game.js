@@ -2,7 +2,7 @@
 
 var interval = setInterval(function(){
 
-	if(getPlayerSlot != undefined){
+	if(getPlayerSlot() != undefined){
 
 		setCommander();
 		clearInterval(interval);
