@@ -1,12 +1,12 @@
 {
     "context": "client",
-    "identifier": "nl.jordev.favComColor",
-    "display_name": "Favorite Commander & Color",
-    "description": "Automatically chooses the correct colour and commander in the lobby",
+    "identifier": "nl.jordev.favCommander",
+    "display_name": "Favorite Commander",
+    "description": "Automatically chooses the commander selected in the armory",
     "author": "SideSplitter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "build": "62037",
-    "date": "2014/03/01",
+    "date": "2014/03/03",
     "signature": "not yet implemented",
     "forum": "https://forums.uberent.com/threads/rel-favorite-commander-and-color-v1-0-0-62037.57278/",
     "icon": "http://pamods.github.io/icons/favComColor.png",
@@ -16,17 +16,15 @@
         "lobby",
         "automatic"
     ],
-    "id": "favComColor",
+    "id": "favCommander",
     "priority": 100,
     "global_mod_list": [],
     "new_game": [
-        "coui://ui/mods/favComColor/new_game.js"
+        "coui://ui/mods/favCommander/new_game.js"
     ],
     "settings": [
-        "coui://ui/mods/favComColor/settings.js"
+        "coui://ui/mods/favCommander/settings.js"
     ],
-    "requires": [
-        "rSettingsManager"
-    ],
+    "requires": [],
     "enabled": true
 }
